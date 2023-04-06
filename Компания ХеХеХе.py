@@ -1,6 +1,3 @@
-import sys
-sys.setrecursionlimit(10000)
-
 f = open(r"C:\Users\Halim\OneDrive\Рабочий стол\Олимпиадки\Тесты к задачам и мои заметки\Компания ХХХ\input_s1_11.txt")
 iter = 0
 line = ""
@@ -38,9 +35,9 @@ def workers_add():
 
 
 def relationships_add():
-    if iter % 2 == 1 and id_boss not in relationships.keys():  # руководитель
+    if iter % 2 == 1 and id_boss not in relationships.keys():
         relationships[id_boss] = []
-    elif iter % 2 == 0:  # подчинённый, если подчинённый явл чьим-то руководителем, то из его списка добавить подчинённых ещё и к руководителю, тогда не надо будет рекурсию делать
+    elif iter % 2 == 0:
         relationships[id_boss].append(id_worker)
 
 
